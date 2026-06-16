@@ -32,85 +32,106 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txtUsername = new TextBox();
+            txtEmail = new TextBox();
+            txtPassword = new TextBox();
+            txtConfirm = new TextBox();
+            cbbRoles = new ComboBox();
+            btnRegister = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(37, 58);
+            label1.Location = new Point(29, 36);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(50, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "Usuário:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(37, 148);
+            label2.Location = new Point(29, 79);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(39, 15);
             label2.TabIndex = 1;
-            label2.Text = "label2";
+            label2.Text = "Email:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(37, 232);
+            label3.Location = new Point(29, 122);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(42, 15);
             label3.TabIndex = 2;
-            label3.Text = "label3";
+            label3.Text = "Senha:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(37, 310);
+            label4.Location = new Point(29, 160);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(79, 15);
             label4.TabIndex = 3;
-            label4.Text = "label4";
+            label4.Text = "Confirmação:";
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Location = new Point(133, 55);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(214, 23);
-            textBox1.TabIndex = 4;
+            txtUsername.Location = new Point(114, 33);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(214, 23);
+            txtUsername.TabIndex = 4;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(133, 145);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(214, 23);
-            textBox2.TabIndex = 5;
+            txtEmail.Location = new Point(114, 79);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(214, 23);
+            txtEmail.TabIndex = 5;
             // 
-            // textBox3
+            // txtPassword
             // 
-            textBox3.Location = new Point(133, 224);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(214, 23);
-            textBox3.TabIndex = 6;
+            txtPassword.Location = new Point(114, 122);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(214, 23);
+            txtPassword.TabIndex = 6;
             // 
-            // textBox4
+            // txtConfirm
             // 
-            textBox4.Location = new Point(133, 302);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(214, 23);
-            textBox4.TabIndex = 7;
+            txtConfirm.Location = new Point(114, 160);
+            txtConfirm.Name = "txtConfirm";
+            txtConfirm.Size = new Size(214, 23);
+            txtConfirm.TabIndex = 7;
+            // 
+            // cbbRoles
+            // 
+            cbbRoles.FormattingEnabled = true;
+            cbbRoles.Location = new Point(374, 36);
+            cbbRoles.Name = "cbbRoles";
+            cbbRoles.Size = new Size(121, 23);
+            cbbRoles.TabIndex = 8;
+            // 
+            // btnRegister
+            // 
+            btnRegister.Location = new Point(117, 210);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(98, 23);
+            btnRegister.TabIndex = 9;
+            btnRegister.Text = "Registrar";
+            btnRegister.UseVisualStyleBackColor = true;
             // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(526, 450);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(586, 302);
+            Controls.Add(btnRegister);
+            Controls.Add(cbbRoles);
+            Controls.Add(txtConfirm);
+            Controls.Add(txtPassword);
+            Controls.Add(txtEmail);
+            Controls.Add(txtUsername);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -127,9 +148,14 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private TextBox txtUsername;
+        private TextBox txtEmail;
+        private TextBox txtPassword;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtConfirm;
+        private ComboBox cbbRoles;
+        private Button btnRegister;
     }
 }
