@@ -108,8 +108,12 @@
 
         private LinkLabel lnkRegister;
         private Label lblUsuário;
+
+        public Label lblPassword { get; private set; }
+
         private Label label2;
         private Button btnLogin;
+        private TextBox txtUserName;
         private Button button2;
         private TextBox textBox1;
         private TextBox txtPassword;
