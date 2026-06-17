@@ -1,11 +1,12 @@
-﻿using System;
+﻿using LoginSystem.Context;
+using LoginSystem.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
-using LoginSystem.Context;
-using LoginSystem.Models;
 
 namespace LoginSystem
 {
@@ -24,9 +25,9 @@ namespace LoginSystem
         {
             using var db = new AppDbContext();
             var user = db.Users
-                         .Include(u + u.UserRoles)
-                         .TheInclude(Ur => Ur.Role)
-                        .FirstOrDefault(u => u.Username == username);
+                         .Include( u => u.UserRoles)
+                         .ThenInclude(Ur => Ur.Role)
+                         .FirstOrDefault(u => u.Username == username);
             if (user == null)
                 return null;
 
@@ -37,19 +38,22 @@ namespace LoginSystem
         public static bool RegisterUser(string username, string email, string
     password, string roleName = "User")
         {
-            using var db = new AppContext();
+            using var db = new AppDbContext();
             // Verifica se usuário já existe 
             if (db.Users.Any(u => u.Username == username || u.Email == email))
                 return false;
 
+            var role = db.Roles.FirstOrDefault(r => r.Name == roleName);
+            if (role == null) role = db.Roles.First(r => r.Name == "User");
+          
             var user = new User
             {
                 Username = username,
-                email = email,
+                Email = email,
                 PasswordHash = HashPassword(password)
             };
 
-            db.User.Add(user);
+            db.Users.Add(user);
             db.SaveChanges(); //salva para gerar o Id,RoleId - role.Id });
 
             //Adiciona o papel
