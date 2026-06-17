@@ -36,7 +36,7 @@
             txtEmail = new TextBox();
             txtPassword = new TextBox();
             txtConfirm = new TextBox();
-            cbbRoles = new ComboBox();
+            cmbRole = new ComboBox();
             btnRegister = new Button();
             SuspendLayout();
             // 
@@ -104,13 +104,13 @@
             txtConfirm.Size = new Size(214, 23);
             txtConfirm.TabIndex = 7;
             // 
-            // cbbRoles
+            // cmbRole
             // 
-            cbbRoles.FormattingEnabled = true;
-            cbbRoles.Location = new Point(374, 36);
-            cbbRoles.Name = "cbbRoles";
-            cbbRoles.Size = new Size(121, 23);
-            cbbRoles.TabIndex = 8;
+            cmbRole.FormattingEnabled = true;
+            cmbRole.Location = new Point(374, 36);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(121, 23);
+            cmbRole.TabIndex = 8;
             // 
             // btnRegister
             // 
@@ -120,6 +120,7 @@
             btnRegister.TabIndex = 9;
             btnRegister.Text = "Registrar";
             btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // RegisterForm
             // 
@@ -127,7 +128,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(586, 302);
             Controls.Add(btnRegister);
-            Controls.Add(cbbRoles);
+            Controls.Add(cmbRole);
             Controls.Add(txtConfirm);
             Controls.Add(txtPassword);
             Controls.Add(txtEmail);
@@ -155,7 +156,7 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox txtConfirm;
-        private ComboBox cbbRoles;
+        private ComboBox cmbRole;
         private Button btnRegister;
     }
 }
