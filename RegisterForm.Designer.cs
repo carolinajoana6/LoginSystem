@@ -120,7 +120,7 @@
             btnRegister.TabIndex = 9;
             btnRegister.Text = "Registrar";
             btnRegister.UseVisualStyleBackColor = true;
-            btnRegister.Click += btnRegister_Click;
+            btnRegister.Click += BtnRegister_Click;
             // 
             // RegisterForm
             // 

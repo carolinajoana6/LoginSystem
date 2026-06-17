@@ -30,7 +30,7 @@ namespace LoginSystem
 
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void BtnRegister_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string email = txtEmail.Text.Trim();
