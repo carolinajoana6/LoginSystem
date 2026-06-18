@@ -30,10 +30,11 @@
         {
             lnkRegister = new LinkLabel();
             lblUsuário = new Label();
-            this.lblPassword = new Label();
             btnLogin = new Button();
-            this.txtUserName = new TextBox();
+            txtUserName = new TextBox();
             txtPassword = new TextBox();
+            lblSenha = new Label();
+            combox = new ComboBox();
             SuspendLayout();
             // 
             // lnkRegister
@@ -55,15 +56,6 @@
             lblUsuário.TabIndex = 1;
             lblUsuário.Text = "Usuário";
             // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new Point(34, 136);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new Size(39, 15);
-            this.lblPassword.TabIndex = 2;
-            this.lblPassword.Text = "Senha";
-            // 
             // btnLogin
             // 
             btnLogin.Location = new Point(133, 196);
@@ -75,10 +67,10 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new Point(120, 54);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new Size(157, 23);
-            this.txtUserName.TabIndex = 5;
+            txtUserName.Location = new Point(120, 54);
+            txtUserName.Name = "txtUserName";
+            txtUserName.Size = new Size(157, 23);
+            txtUserName.TabIndex = 5;
             // 
             // txtPassword
             // 
@@ -87,15 +79,33 @@
             txtPassword.Size = new Size(157, 23);
             txtPassword.TabIndex = 6;
             // 
+            // lblSenha
+            // 
+            lblSenha.AutoSize = true;
+            lblSenha.Location = new Point(34, 136);
+            lblSenha.Name = "lblSenha";
+            lblSenha.Size = new Size(39, 15);
+            lblSenha.TabIndex = 7;
+            lblSenha.Text = "Senha";
+            // 
+            // combox
+            // 
+            combox.FormattingEnabled = true;
+            combox.Location = new Point(323, 49);
+            combox.Name = "combox";
+            combox.Size = new Size(121, 23);
+            combox.TabIndex = 8;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(478, 265);
+            Controls.Add(combox);
+            Controls.Add(lblSenha);
             Controls.Add(txtPassword);
-            Controls.Add(this.txtUserName);
+            Controls.Add(txtUserName);
             Controls.Add(btnLogin);
-            Controls.Add(this.lblPassword);
             Controls.Add(lblUsuário);
             Controls.Add(lnkRegister);
             Name = "LoginForm";
@@ -117,5 +127,7 @@
         private Button button2;
         private TextBox textBox1;
         private TextBox txtPassword;
+        private Label lblSenha;
+        private ComboBox combox;
     }
 }

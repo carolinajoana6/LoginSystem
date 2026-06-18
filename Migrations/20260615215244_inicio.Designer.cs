@@ -13,7 +13,7 @@ namespace LoginSystem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20260615215244_inicio")]
-    partial class inicio
+    partial class Inicio
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

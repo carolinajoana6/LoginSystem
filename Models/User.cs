@@ -24,6 +24,7 @@ namespace LoginSystem.Models
 
         // Relacionamento muitos-para-muitos com Role
          public ICollection<UserRole> UserRoles { get; set; }
-
+        public string Password { get; internal set; }
+        public string Role { get; internal set; }
     }
 }

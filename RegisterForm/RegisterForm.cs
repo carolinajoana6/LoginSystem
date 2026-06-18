@@ -1,6 +1,7 @@
 ﻿using LoginSystem.Context;
 using LoginSystem.Models;
 using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,8 +24,8 @@ namespace LoginSystem
         private void LoadRoles()
         {
             using var db = new AppDbContext();
-            var roels = db.Roles.ToList();
-            cmbRole.DataSource = cmbRole;
+            var roles = db.Roles.ToList();
+            cmbRole.DataSource = roles;
             cmbRole.DisplayMember = "Name";
             cmbRole.ValueMember = "Id";
 
@@ -67,6 +68,29 @@ namespace LoginSystem
             }
 
 
+        }
+    }
+
+    public static partial class AuthService
+    {
+        public static bool RegisterUser(string username, string email, string password, string role)
+        {
+            using var db = new AppDbContext();
+
+            if (db.Users.Any(u => u.Username == username || u.Email == email))
+                return false;
+
+            var user = new User
+            {
+                Username = username,
+                Email = email,
+                Password = password, // consider hashing in real app
+                Role = role
+            };
+
+            db.Users.Add(user);
+            db.SaveChanges();
+            return true;
         }
     }
 }
